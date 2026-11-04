@@ -1,0 +1,38 @@
+{
+  "name": "world-studio",
+  "productName": "World Studio",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Local ComfyUI-powered world and scene builder: describe a location and its props, extract each part from a concept, and batch-generate static 3D models.",
+  "type": "module",
+  "main": "out/main/index.js",
+  "scripts": {
+    "dev": "electron-vite dev",
+    "start": "electron-vite preview",
+    "build": "npm run typecheck && electron-vite build",
+    "typecheck": "tsc --noEmit",
+    "test": "node --import tsx --test tests/*.test.ts",
+    "smoke": "node scripts/world-smoke.mjs",
+    "icon": "node scripts/make-icon.mjs"
+  },
+  "dependencies": {
+    "lucide-react": "1.61.0",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "three": "0.186.1",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.64.1",
+    "@types/node": "^26.0.0",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "^19.2.3",
+    "@types/three": "0.186.0",
+    "@vitejs/plugin-react": "6.1.2",
+    "electron": "44.9.3",
+    "electron-vite": "6.0.0",
+    "tsx": "^4.21.0",
+    "typescript": "7.0.2",
+    "vite": "8.3.5"
+  }
+}
