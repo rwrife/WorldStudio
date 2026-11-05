@@ -4,4 +4,8 @@ release/
 .tools/
 artifacts/
 *.log
-
+.env
+.env.*
+!.env.example
+*.safetensors
+*.ckpt
